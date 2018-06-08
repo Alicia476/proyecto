@@ -1,142 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Portfolio Alicia Cardete</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
     <link rel="stylesheet" href="/assets/css/hover.css">
-    <link rel="stylesheet" href="/assets/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.6/css/swiper.min.css">
     <link href="assets/css/animsition.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600,700,800" rel="stylesheet">
-
+    <link rel="stylesheet" href="assets/css/bootstrap-grid.min.css">
+    <title>Portfolio Alicia Cardete</title>
 </head>
-<body class="animsition" data-animsition-in-class="fade-in"  data-animsition-out-class="fade-out-up">
-<main>
 
-    <!-- LANDING -->
-    <header class="landing flex-column-center background">
-        <nav class="landing__navegacion">
-            <ul>
-                <li><a id='about-nav' href="#">About</a></li>
-                <li><a id="works-nav" href="#">Works</a></li>
-                <li><a id="contact-nav" href="#">Contact</a></li>
-            </ul>
-        </nav>
-        
-        <section class="landing__informacion flex-column-center wow fadeIn" data-wow-duration="2s" data-wow-delay=".5s">
-            <div class="wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s" style="z-index: 1;"><h1>Hello</h1></div>
-            <p>I'm Alicia, a web designer and junior frontend developer <br>and this is my portfolio. Nice to meet you!
-            </p>
-            <h3 class="texto-small wow bounce hvr-underline-from-center" data-wow-duration="1s" data-wow-delay="1.5s"><a href="#" class="animsition-link">see more</a></h3>
-            <img class="position-absolute" src="./assets/img/rombos.png" alt="Portfolio de Alicia Cardete">
-        </section>
-    </header>
+<body class="animsition" data-animsition-in-class="fade-in" data-animsition-out-class="fade-out-up">
+    <main class="container-fluid">
 
-    <!-- ABOUT -->
-    <a name="about-page"></a>
-    <section class="about background">
-        <section class="about__columnaizquierda">
-            <h2 class="titulo-mediano  wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">I enjoy everyday, because
-                I work in what I love</h2>
-            <article class="about__columnaizquierda__texto wow fadeIn" data-wow-duration="1s" data-wow-delay=".8s">
-                <p>I’m a 24 years old hardworking and passionated webx designer and frontend developer from Spain. I
-                    finished my master in June 2018, so now I’m looking for a job that offers me an opportunity to
-                    develop my skills in this professional field and to learn more about it everyday.</p>
-                <p>Before starting my career like a web designer and frontend developer, I built several blogger designs
-                    for some clients. These experiences made me realize I love it and that I needed to change my career
-                    -I was studying to be a Primary teacher- for be a professional of this labor field. I’m very proud
-                    of took that decisition. </p>
-                <p class="titulo-pequeño">What can I do?</p>
-                <p>As designer, I can create multidispositive wireframes and responsive designs. I can use Axure RP,
-                    Adobe Photoshop, Sketch, Principle and I’m learning Adobe Illustrator and about logo designs and
-                    lettering. Moreover, as frontend developer, I know HTML5, CSS3, Javascript, Flexbox, Grid, PHP and
-                    Wordpress. </p>
-                <p class="titulo-pequeño">A little more about me</p>
-                <p>I LOVE reading, writing, the bellydance, yoga and nature. I’ve travelled around Europe and I’ve
-                    visited Norway, UK, France, Italy (where I resided four months), Poland, Portugal… and I hope to
-                    travel around the world one day! I believe in dreams, so I always follow mine and encourage others
-                    to do it too. Ahhh, and I have a blog where I share writing tips :)</p>
-            </article>
-        </section>
-        <section class="about__columnaderecha">
-            <img class="about__columnaderecha__rectangulo position-absolute wow fadeInRight" data-wow-duration="1s" data-wow-delay=".2s"  src="./assets/img/rectangulo-rosa.jpg" alt="">
-            <img class="wow fadeInRight position-absolute" data-wow-duration="1s" data-wow-delay=".5s" src="./assets/img/foto-alicia.jpg" alt="Alicia Cardete">
-            <section class="about__columnaderecha__letras letter-big wow fadeIn" data-wow-duration="1s" data-wow-delay=".8s">
-                <div class="about__columnaderecha__a position-absolute draggable hvr-bob">A</div>
-                <div class="about__columnaderecha__b position-absolute draggable hvr-bob">B</div>
-                <div class="about__columnaderecha__o position-absolute draggable hvr-bob">O</div>
-                <div class="about__columnaderecha__u position-absolute draggable hvr-bob">U</div>
-                <div class="about__columnaderecha__t position-absolute draggable hvr-bob">T</div>
-            </section>
-        </section>
-    </section>
+        <!-- HEADER-->
+        <header>
+            <!-- LOGO-->
+            <a id="logo-nav" href="#">
+                <img id="logo" src="assets/img/logo2.svg" alt="Portfolio Alicia Cardete">
+            </a>
+            <!-- FIN LOGO-->
+            <!-- NAV / MENU-->
+            <nav class="landing__navegacion">
+                <ul>
+                    <li>
+                        <a class='about-nav' href="#">About</a>
+                    </li>
+                    <li>
+                        <a class="works-nav" href="#">Works</a>
+                    </li>
+                    <li>
+                        <a class="contact-nav" href="#">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- FIN NAV / MENU-->
+            <!-- MENU MOVIL-->
+            <div id="mySidenav" class="sidenav">
+                <a id="close-nav" href="javascript:void(0)" class="closebtn">&times;</a>
+                <a class='about-nav-movil' href="#">About</a>
+                <a class="works-nav-movil" href="#">Works</a>
+                <a class="contact-nav-movil" href="#">Contact</a>
+            </div>
+            <span id="open-nav" class="nav-movil">&#9776;</span>
+            <!-- FIN MENU MOVIL-->
+        </header>
+        <!-- FIN HEADER-->
 
 
-    <a name="works-page"></a>
-    <section class="works">
-        <section class="works__columnaizquierda flex-center">
-            <section class="works__columnaizquierda__letras letter-big">
-                <h1 class="works__columnaizquierda__w  wow fadeInLeft" data-wow-duration=".5s" data-wow-delay=".2s">W</h1>
-                <h1 class="works__columnaizquierda__o wow fadeInLeft" data-wow-duration=".5s" data-wow-delay=".3s">O</h1>
-                <h1 class="works__columnaizquierda__r wow fadeInRight" data-wow-duration=".5s" data-wow-delay=".4s">R</h1>
-                <h1 class="works__columnaizquierda__k wow fadeInLeft" data-wow-duration=".5s" data-wow-delay=".3s">K</h1>
-                <h1 class="works__columnaizquierda__s wow fadeInRight" data-wow-duration=".5s" data-wow-delay=".4s">S</h1>
-            </section>
-            <ul class="works__columnaizquierda__proyectos position-absolute wow fadeIn" data-wow-duration="1.5s" >
-                <li><h3>01</h3>
-                    <h1>Ngo Sambori</h1></li>
-                <li><h2>Proyecto 2</h2></li>
-                <li><h2>Proyecto 3</h2></li>
-            </ul>
-        </section>
-        <section class="works__columnaderecha flex-center wow fadeIn" data-wow-duration="2s" data-wow-delay=".6s">
-            <div class="works__columnaderecha__img"></div>
-            <p class="works__columnaderecha__see position-absolute wow bounce hvr-forward" data-wow-duration="1s" data-wow-delay="1s" data-wow-iteration="2"><a href="project.html" 
-                class="animsition-link" data-animsition-out-class="fade-out-up"
-                data-animsition-out-duration="800">see project</a></p>
-        </section>
-    </section>
-
-    <a name="contact-page"></a>
-    <footer class="contact background">
-        <section class="contact__columnaizq wow fadeInLeft" data-wow-duration="1.2s" data-wow-delay=".4s"">
-            <h1 class="contact__columnaizq__co position-absolute">CO</h1>
-            <h1 class="contact__columnaizq__nta position-absolute">NTA</h1>
-            <h1 class="contact__columnaizq__ct position-absolute">CT</h1>
-        </section>
-        <section class="contact__columnader wow fadeInUp" data-wow-duration="1s">
-            <section class="contact__columnader__info flex-column-center">
-
-                <p>Do you want to contact me?<br>Feel free to get in touch!</p>
-                <section class="contact__columnader__info__impor">
-                    <h3 class="contact__columnader__info__impor__tachado">_Email</h3>
-                    <h2 class="titulo-mediano"><a href="#">miemail@miemail.com</a></h2>
-                    <h3 class="contact__columnader__info__impor__tachado">_Mobile</h3>
-                    <h2 class="titulo-mediano"><a href="#">(+34)697468210</a></h2>
+        <!-- LANDING-->
+        <a name="landing-page"></a>
+        <section id="landing-page" class="landing background">
+            <!-- LANDING ROW-->
+            <div class="row landing__row justify-content-center align-items-center">
+                <!-- LANDING CONTENIDO-->
+                <section class="landing__informacion col-10 col-xl-6 offset-xl-4 wow fadeIn" data-wow-duration="2s" data-wow-delay=".5s">
+                    <h1 class="wow fadeInUp landing__informacion__h1-visible" data-wow-duration="1.2s" data-wow-delay=".5s" style="z-index: 1;">Hello</h1>
+                    <p>I'm Alicia, a web designer and junior frontend developer and this is my portfolio. Nice to meet you!
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <a id="see-more" class="texto-small wow bounce hvr-underline-from-center" data-wow-duration="1s" data-wow-delay="1.5s" href="#">see more</a>
+                    </p>
+                    <img class="position-absolute" src="./assets/img/rombos.png" alt="Portfolio de Alicia Cardete">
                 </section>
-                <img src="./assets/img/rectangulo-rosa2.jpg" alt="">
-            </section>
-
+                <!-- FIN LANDING CONTENIDO-->
+            </div>
+            <!-- FIN LANDING ROW-->
         </section>
-        <section class="contact__footer texto-small">
-            <p>2018 © Alicia Cardete, Spain | <a href="#"><b>Visit my Linkedin</b></a></p>
+        <!-- FIN LANDING -->
+
+
+        <!-- ABOUT-->
+        <a name="about-page"></a>
+        <section id="about-page" class="about background">
+            <!-- ABOUT ROW-->
+            <div class="about__row row justify-content-center align-items-center">
+                <!-- ABOUT COLUMNA IZQUIERDA-->
+                <section class="about__columnaizquierda col-10 col-md-10 order-2 col-lg-5 order-lg-1 col-xl-6 order-xl-1 justify-content-center align-items-center">
+                    <h2 class="titulo-mediano  wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">I enjoy everyday, because I work in what I love</h2>
+                    <article class="about__columnaizquierda__texto wow fadeIn" data-wow-duration="1s" data-wow-delay=".8s">
+                        <p>I’m a 24 years old hardworking and passionated webx designer and frontend developer from Spain. I
+                            finished my master in June 2018, so now I’m looking for a job that offers me an opportunity to
+                            develop my skills in this professional field and to learn more about it everyday.</p>
+                        <br>
+                        <p>Before starting my career like a web designer and frontend developer, I built several blogger designs
+                            for some clients. These experiences made me realize I love it and that I needed to change my
+                            career -I was studying to be a Primary teacher- for be a professional of this labor field. I’m
+                            very proud of took that decisition. </p>
+                        <br>
+                        <p class="titulo-pequeño">What can I do?</p>
+                        <br>
+                        <p>As designer, I can create multidispositive wireframes and responsive designs. I can use Axure RP,
+                            Adobe Photoshop, Sketch, Principle and I’m learning Adobe Illustrator and about logo designs
+                            and lettering. Moreover, as frontend developer, I know HTML5, CSS3, Javascript, Flexbox, Grid,
+                            PHP and Wordpress.
+                        </p>
+                        <br>
+                        <p class="titulo-pequeño">A little more about me</p>
+                        <br>
+                        <p>I LOVE reading, writing, the bellydance, yoga and nature. I’ve travelled around Europe and I’ve visited
+                            Norway, UK, France, Italy (where I resided four months), Poland, Portugal… and I hope to travel
+                            around the world one day! I believe in dreams, so I always follow mine and encourage others to
+                            do it too. Ahhh, and I have a blog where I share writing tips :)</p>
+                    </article>
+                </section>
+                <!-- ABOUT FIN COLUMNA IZQUIERDA-->
+                <!-- ABOUT COLUMNA DERECHA-->
+                <section class="about__columnaderecha col-10 order-1 col-md-8 col-lg-5 col-xl-4">
+                    <div class="about__columnaderecha__rectangulo wow fadeInRight" data-wow-duration="1s" data-wow-delay=".2s"></div>
+                    <img class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".5s" src="./assets/img/foto-alicia.jpg" alt="Alicia Cardete">
+                    <section class="about__columnaderecha__letras letter-big wow fadeIn" data-wow-duration=".8s" data-wow-delay=".2s">
+                        <div class="about__columnaderecha__a  position-absolute draggable hvr-bob">A</div>
+                        <div class="about__columnaderecha__b position-absolute draggable hvr-bob">B</div>
+                        <div class="about__columnaderecha__o position-absolute draggable hvr-bob">O</div>
+                        <div class="about__columnaderecha__u position-absolute draggable hvr-bob">U</div>
+                        <div class="about__columnaderecha__t position-absolute draggable hvr-bob">T</div>
+                    </section>
+                </section>
+                <!-- ABOUT FIN COLUMNA DERECHA-->
+            </div>
+            <!-- ABOUT FIN ROW-->
         </section>
-    </footer>
+        <!-- FIN ABOUT-->
+
+        <!-- WORKS -->
+        <a name="works-page"></a>
+        <section id="works-page" class="works">
+            <div class="works__wrapper row justify-content-center align-items-center">
+                <div class="works__letras col-md-2 col-lg-2 col-xl-2">
+                    <h1 class="letter-big works__w wow fadeInLeft" data-wow-duration=".5s" data-wow-delay=".2s">W</h1>
+                    <h1 class="letter-big works__o wow fadeInLeft" data-wow-duration=".5s" data-wow-delay=".3s">O</h1>
+                    <h1 class="letter-big works__r wow fadeInRight" data-wow-duration=".5s" data-wow-delay=".4s">R</h1>
+                </div>
+                <section class="works__proyectos col-12 col-sm-8 col-md-10 col-lg-6 col-xl-6 wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
+                    <div class="swiper-container wow fadeIn" data-wow-duration="1.5s" data-wow-delay=".3s">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="assets/img/SARAH mock.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/img/wild forest.png" alt="">
+                            </div>
+                            <div class="swiper-slide">Slide 3</div>
+                            <div class="swiper-slide">Slide 4</div>
+                            <div class="swiper-slide">Slide 5</div>
+                        </div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                    <div class="works__proyectos-texto" style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; ">
+                        <h1 class="titulo-mediano">Project's name</h1>
+                        <div class="row justify-content-center">
+                            <div class="col-11">
+                                <p>Have you ever wondered if what you know about herbal breast enlargement is accurate? Consider
+                                    the following paragraphs and compare what you know to the latest info on herbal breast
+                                    enlargement</p>
+                            </div>
+                        </div>
+                        <a class="texto-small animsition-link hvr-underline-from-center" data-animsition-out-class="fade-out-up" data-animsition-out-duration="800"
+                            href="proyectos.html">
+                            <b>see project</b>
+                        </a>
+                    </div>
+                </section>
+                <div class="works__letras col-md-2 col-lg-2 col-xl-2">
+                    <h1 class="letter-big works__k wow fadeInLeft" data-wow-duration=".5s" data-wow-delay=".3s">K</h1>
+                    <h1 class="letter-big works__s wow fadeInRight" data-wow-duration=".5s" data-wow-delay=".4s">S</h1>
+                </div>
+            </div>
+        </section>
+        <!-- FIN WORKS-->
 
 
-</main>
+        <!-- CONTACT-->
+        <a name="contact-page"></a>
+        <footer id="contact-page" class="contact background">
+            <!-- CONTACT ROW 1-->
+            <div class="row">
+                <!-- CONTACT COLUMNA IZQUIERDA-->
+                <section class="contact__columnaizq col-lg-5 offset-lg-1 col-xl-5 offset-xl-1 wow fadeInLeft" data-wow-duration="1.2s" data-wow-delay=".4s">
+                    <h1 class="contact__columnaizq__co letter-big">CO
+                        <br>NTA
+                        <br>CT</h1>
+                </section>
+                <!-- CONTACT FIN COLUMNA IZQUIERDA-->
+                <!-- CONTACT COLUMNA DERECHA-->
+                <section class="contact__columnader col-md-12 col-lg-5 col-xl-5 wow fadeInUp" data-wow-duration="1s ">
+                    <section class="contact__columnader__info">
+                        <div class="contact__columnader__img"></div>
+                        <p>Do you want to contact me?
+                            <br>Feel free to get in touch!</p>
+                        <section class="contact__columnader__info__impor ">
+                            <h3 class="contact__columnader__info__impor__tachado ">_Email</h3>
+                            <h2 class="titulo-mediano hvr-forward">
+                                <a href="# ">miemail@miemail.com</a>
+                            </h2>
+                            <h3 class="contact__columnader__info__impor__tachado ">_Mobile</h3>
+                            <h2 class="titulo-mediano hvr-forward">
+                                <a href="# ">(+34)697468210</a>
+                            </h2>
+                        </section>
+                    </section>
+                </section>
+                <!-- FIN COLUMNA DERECHA-->
+                <!-- CONTACT COPYRIGHT-->
+                <section class="contact__footer col-xl-12">
+                    <div class="contact__footer__texto texto-small">
+                        <p>2018 © Alicia Cardete, Spain</p>
+                    </div>
+                    <div class="contact__footer__rrss">
+                        <ul class="contact__footer__rrss__ul">
+                            <a href="#">
+                                <li>
+                                    <img src="assets/img/logo-linkedin.svg" alt="">
+                                </li>
+                            </a>
+                            <a href="#">
+                                <li>
+                                    <img src="assets/img/wordpress.svg" alt="">
+                                </li>
+                            </a>
+                            <a href="#">
+                                <li>
+                                    <img src="assets/img/logo-instagram.svg" alt="">
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
+                </section>
+                <!-- CONTACT FIN COPYRIGHT-->
+            </div>
+            <!-- CONTACT FIN ROW 1-->
+        </footer>
+        <!-- FIN CONTACT-->
+    </main>
 
-<!-- MY SCRIPTS -->
-<script src="/assets/js/jquery-3.3.1.min.js"></script>
-<script src="/assets/js/jquery-ui.min.js"></script>
-<script src="/assets/js/wow.min.js"></script>
-<script src="assets/js/animsition.min.js"></script>
-<script src="/assets/js/main.js"></script>
 
 
+
+    <!-- MY SCRIPTS -->
+    <script src="assets/js/jquery.min.js "></script>
+    <script src="assets/js/jquery-ui.min.js "></script>
+    <script src="assets/js/wow.min.js "></script>
+    <script src="assets/js/animsition.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.6/js/swiper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <!-- JUAN -->
+    <script src="assets/js/noframework.waypoints.min.js"></script>
+    <!-- JUAN -->
+    <script src="assets/js/main.js "></script>
 
 </body>
+
 </html>

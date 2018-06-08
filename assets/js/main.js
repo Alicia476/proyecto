@@ -1,25 +1,50 @@
 $(document).ready(function() {
+
+  // SLIDER
+  $(document).ready(function() {
+    var swiper = new Swiper(".swiper-container", {
+      speed: 600,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      }
+    });
+  });
+
   // ANCHORS JQUERY
   function scrollToAnchor(aid) {
     var aTag = $("a[name='" + aid + "']");
     $("html,body").animate({ scrollTop: aTag.offset().top }, "slow");
   }
-  $("#about-nav").click(function() {
+  $(".about-nav").click(function() {
     scrollToAnchor("about-page");
   });
-  $("#works-nav").click(function() {
+  $(".works-nav").click(function() {
     scrollToAnchor("works-page");
   });
-  $("#contact-nav").click(function() {
+  $(".contact-nav").click(function() {
     scrollToAnchor("contact-page");
+  });
+  $("#see-more").click(function() {
+    scrollToAnchor("about-page");
+  });
+  $("#logo-nav").click(function() {
+    scrollToAnchor("landing-page");
+  });
+  $(".logo-projects").click(function() {
+    scrollToAnchor("projects-page");
   });
 
   // ANIMSITION JS
   $(".animsition").animsition({
     inClass: "fade-in-left",
     outClass: "fade-out-left",
-    inDuration: 1500,
-    outDuration: 800,
+    inDuration: 1000,
+    outDuration: 1000,
     linkElement: ".animsition-link",
     // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
     loading: true,
@@ -50,32 +75,49 @@ $(document).ready(function() {
   $(".draggable").mouseleave(function() {
     $(this)
       .css("color", "white")
-      .delay(5000);
+      .delay(5000);en
   });
 
-  // SCROLL
-  $(window).scroll(function(event) {
-    if ($(this).scrollTop() < 980 && $(this).scrollTop() > 0) {
-      $("#about-nav").css("color", "");
-      $("#works-nav").css("color", "");
-      $("#contact-nav").css("color", "");
+  
+  // Waypoints menu color selection
+  new Waypoint({
+    element: document.getElementById('landing-page'),
+    handler: function() {
+      $(".about-nav").css("color", "");
+      $(".works-nav").css("color", "");
+      $(".contact-nav").css("color", "");
+    },
+    offset: "-25%"
+  })
+
+  new Waypoint({
+    element: document.getElementById('about-page'),
+    handler: function() {
+      $(".about-nav").css("color", "#FA4CBA");
+      $(".works-nav").css("color", "");
+      $(".contact-nav").css("color", "");
     }
-    if ($(this).scrollTop() < 1980 && $(this).scrollTop() > 980) {
-      $("#about-nav").css("color", "#FA4CBA");
-      $("#works-nav").css("color", "");
-      $("#contact-nav").css("color", "");
-    }
-    if ($(this).scrollTop() < 2990 && $(this).scrollTop() > 1980) {
-      $("#works-nav").css("color", "#429FE6");
-      $("#about-nav").css("color", "");
-      $("#contact-nav").css("color", "");
-    }
-    if ($(this).scrollTop() < 4096 && $(this).scrollTop() > 2990) {
-      $("#contact-nav").css("color", "#AB2FDB");
-      $("#about-nav").css("color", "");
-      $("#works-nav").css("color", "");
-    }
-  });
+  })
+
+  new Waypoint({
+    element: document.getElementById('works-page'),
+    handler: function() {
+      $(".works-nav").css("color", "#429FE6");
+      $(".about-nav").css("color", "");
+      $(".contact-nav").css("color", "");
+    },
+  })
+
+  new Waypoint({
+    element: document.getElementById('contact-page'),
+    handler: function() {
+      $(".contact-nav").css("color", "#AB2FDB");
+      $(".about-nav").css("color", "");
+      $(".works-nav").css("color", "");
+    },
+    offset: 'bottom-in-view'
+  })
+
 
   // WOW
   wow = new WOW({
@@ -87,9 +129,12 @@ $(document).ready(function() {
     callback: function(box) {}
   });
   wow.init();
-  document.getElementById("moar").onclick = function() {
-    var section = document.createElement("section");
-    section.className = "section--purple wow fadeInDown";
-    this.parentNode.insertBefore(section, this);
-  };
+
+  // Menu movil Nav menu events
+  $("#open-nav").click(function() {
+    document.getElementById("mySidenav").style.width = "200px";
+  });
+  $("#close-nav").click(function() {
+      document.getElementById("mySidenav").style.width = "0";
+  });
 });
